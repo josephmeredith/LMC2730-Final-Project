@@ -29,13 +29,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/_OriginalScenes/unitySceneFinal.unity
     guid: 607a57927a2147e4ab6792b18dc3dbb9
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/_OriginalScenes/unitySceneIII.unity
     guid: a7639df3546afc24ab405aa3f36532b4
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/_OriginalScenes/malfunctionScene.unity
     guid: 6c5e2b3ff9ca12a43ae29ad145ecf471
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/_OriginalScenes/unitySceneO.unity
     guid: a5881b53f4316dd48ba6b893dd9b07fa
   - enabled: 0

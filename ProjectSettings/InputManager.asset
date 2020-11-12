@@ -295,12 +295,12 @@ InputManager:
     joyNum: 0
   - serializedVersion: 3
     m_Name: Use
-    descriptiveName: 
+    descriptiveName: Use
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: 
+    positiveButton: e
     altNegativeButton: 
-    altPositiveButton: joystick button 1
+    altPositiveButton: 
     gravity: 1000
     dead: 0.001
     sensitivity: 1000

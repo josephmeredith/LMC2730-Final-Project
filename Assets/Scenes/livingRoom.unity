@@ -212,7 +212,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1860841}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 29.2, y: 12.3, z: -3300.2}
+  m_LocalPosition: {x: 29.2, y: -12.8, z: -3300.2}
   m_LocalScale: {x: 51.182262, y: 0.38792, z: 137.6011}
   m_Children: []
   m_Father: {fileID: 0}
@@ -8710,15 +8710,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 95.4
+      value: 88.81
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 13.56
+      value: 5.94
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3278.6
+      value: -3284.39
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_LocalRotation.w
@@ -9591,7 +9591,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &490769834
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9834,7 +9834,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 504516518}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 58.1, y: -2.4, z: -3308.5}
+  m_LocalPosition: {x: 58.1, y: -3.2, z: -3308.5}
   m_LocalScale: {x: 93.82232, y: 0.38792, z: 93.71711}
   m_Children: []
   m_Father: {fileID: 0}
@@ -19156,7 +19156,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a748f8d8c8c7fd418ce58833d10530f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  instructions: {fileID: 490769833}
 --- !u!114 &1082450168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19184,6 +19183,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   instructions: {fileID: 726698697}
   unitySceneIII: 
+--- !u!114 &1082450170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082450160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 581ed5ccbbd70b544a27658aa9d5b903, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  instructions: {fileID: 1744624506}
 --- !u!1 &1086847251
 GameObject:
   m_ObjectHideFlags: 0
@@ -19322,7 +19334,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '"Hello Dr.Clark, I''m glad you''re up...why don''t you come closer"'
+  m_text: '"I NEED TO GET OUT OF THIS ROOM"'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
