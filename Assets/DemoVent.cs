@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class DemoVent : MonoBehaviour
 {
     public Text screenText;
+    public bool onVent = false;
 
     void Start() {
         screenText.text = "This vent looks promising. Press E to interact.";
@@ -14,7 +15,7 @@ public class DemoVent : MonoBehaviour
     }
 
     void FixedUpdate() {
-        if(Input.GetButton("Interact")) {
+        if(Input.GetButton("Interact") && onVent) {
             Debug.Log("Press registered");
             SceneManager.LoadScene("TechDemoVent");
         }
@@ -25,6 +26,7 @@ public class DemoVent : MonoBehaviour
         if(other.tag == "Player")
         {
             screenText.enabled = true;
+            onVent = true;
         }
     }
 
@@ -33,6 +35,7 @@ public class DemoVent : MonoBehaviour
         if (other.tag == "Player")
         {
             screenText.enabled = false;      
+            onVent = false;
         }
     }
 }
