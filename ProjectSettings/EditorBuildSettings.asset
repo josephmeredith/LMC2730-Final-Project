@@ -38,10 +38,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/_OriginalScenes/unitySceneO.unity
     guid: a5881b53f4316dd48ba6b893dd9b07fa
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/TechDemo.unity
+    guid: efc5d38eb2eaefd42a7a8ccabef4c0a7
+  - enabled: 1
+    path: Assets/Scenes/TechDemoVent.unity
+    guid: 0afec65a856224d4886ffecb7854144d
   m_configObjects: {}

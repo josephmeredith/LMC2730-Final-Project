@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
-public class demoDoor : MonoBehaviour
+public class DemoVentEscape : MonoBehaviour
 {
-    public Text screenText;
+   public Text screenText;
 
     void Start() {
         screenText.text = "Press E to interact.";
@@ -14,7 +15,6 @@ public class demoDoor : MonoBehaviour
 
     void FixedUpdate() {
         if(Input.GetButton("Interact")) {
-            screenText.text = "The door is locked. I need to find another way out.";
             Debug.Log("Press registered");
         }
     }
