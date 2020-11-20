@@ -15,7 +15,6 @@ public class TriggerCube : MonoBehaviour {
 	{
 	CreepyRedLight.SetActive(false);
 	NormalRoomLight.SetActive(true);
-    NatureNoise.SetActive(true);
 	ScaryNoise.SetActive(false);
 	}
         
