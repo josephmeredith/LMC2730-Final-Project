@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+//using TMPro;
+
 
 public class demoDoor : MonoBehaviour
 {
@@ -15,7 +17,7 @@ public class demoDoor : MonoBehaviour
     void FixedUpdate() {
         if(Input.GetButton("Interact")) {
             screenText.text = "The door is locked. I need to find another way out.";
-            Debug.Log("Press registered");
+            //Debug.Log("Press registered");
         }
     }
 
