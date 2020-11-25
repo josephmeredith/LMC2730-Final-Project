@@ -7,7 +7,7 @@ using TMPro;
 public class DialogueScript : MonoBehaviour
 {
     public TextMeshProUGUI textDisplay;
-    public GameObject text;
+    //public GameObject text;
     public string[] sentences;
     private int index;
     public float typingSpeed;
@@ -24,6 +24,10 @@ public class DialogueScript : MonoBehaviour
 
     private void Update()
     {
+        if (textDisplay.text == sentences[index])
+        {
+            continueButton.SetActive(true);
+        }
         if (Input.GetKeyDown(key))
         {
             FadetoColor(button.colors.pressedColor);
@@ -32,10 +36,6 @@ public class DialogueScript : MonoBehaviour
         else if (Input.GetKeyUp(key))
         {
             FadetoColor(button.colors.normalColor);
-        }
-        if (textDisplay.text == sentences[index])
-        {
-            continueButton.SetActive(true);
         }
     }
 
