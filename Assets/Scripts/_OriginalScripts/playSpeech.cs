@@ -20,7 +20,7 @@ public class playSpeech : MonoBehaviour
     }
     IEnumerator WaitForSec()
     {
-        yield return new WaitForSeconds(6);
+        yield return new WaitForSeconds(1);
         Destroy(speechP);
         Destroy(gameObject);
     }
