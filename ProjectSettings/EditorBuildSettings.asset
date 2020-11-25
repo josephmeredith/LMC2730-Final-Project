@@ -7,10 +7,16 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/finalBedroom.unity
-    guid: 5a28909437c497642abb23bf7dc1610b
+    guid: 84bdbc964c6a15c4abfcba34a962049f
   - enabled: 1
-    path: Assets/Scenes/finalBedroomMB.unity
-    guid: 52169e67819b45d42aa883f9fb8da32e
+    path: Assets/Scenes/dialoguesceneMB.unity
+    guid: 5a28909437c497642abb23bf7dc1610b
+  - enabled: 0
+    path: Assets/Scenes/finalbedrMB.unity
+    guid: 04373c71255607040891028e9a22c29c
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/finalArea.unity
     guid: cbff89bde8023f34fb610712bdcd6b0b
