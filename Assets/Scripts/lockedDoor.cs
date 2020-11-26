@@ -1,13 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
+using UnityEngine.UI;
+
 public class lockedDoor : MonoBehaviour
 {
     public TextMeshProUGUI dtextDisplay;
-    public GameObject text;
-    public KeyCode key;
+    //public GameObject text;
+    //public KeyCode key;
+
     void Start()
     {
         dtextDisplay.text = "Press E to interact.";
@@ -16,11 +18,10 @@ public class lockedDoor : MonoBehaviour
     }
     void FixedUpdate()
     {
-        if (Input.GetKeyDown(key))
+        if (Input.GetKeyDown(KeyCode.E))
         {
-            //dtextDisplay.text = "Press E to interact";
-            dtextDisplay.text = "Damn, MotherBoard locked me in...I have to find another way out.";
-            //sDebug.Log("Press registered");
+            dtextDisplay.text = "Damn, MotherBoard locked me in... I have to find another way out.";
+            //Debug.Log("Press registered");
         }
     }
 
