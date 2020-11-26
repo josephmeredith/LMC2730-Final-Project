@@ -3,21 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class DemoVent : MonoBehaviour
 {
-    public Text screenText;
+    public TextMeshProUGUI ventText;
     public bool onVent = false;
 
     void Start() {
-        screenText.text = "This vent looks promising. Press E to interact.";
-        screenText.enabled = false;
+        ventText.text = "Press E to interact";
+        ventText.enabled = false;
     }
 
     void FixedUpdate() {
-        if(Input.GetButton("Interact") && onVent) {
+        if(Input.GetKeyDown(KeyCode.E) && onVent) {
             Debug.Log("Press registered");
-            SceneManager.LoadScene("TechDemoVent");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 
@@ -25,7 +26,7 @@ public class DemoVent : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-            screenText.enabled = true;
+            ventText.enabled = true;
             onVent = true;
         }
     }
@@ -34,7 +35,7 @@ public class DemoVent : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            screenText.enabled = false;      
+            ventText.enabled = false;      
             onVent = false;
         }
     }
