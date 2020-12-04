@@ -5,6 +5,7 @@ using UnityEngine;
 public class beginningText : MonoBehaviour
 {
     public GameObject beginTxt;
+    private bool entered = false;
     void Start()
     {
         beginTxt.SetActive(false);
@@ -12,16 +13,22 @@ public class beginningText : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.tag == "Player" && !entered)
         {
             beginTxt.SetActive(true);
             StartCoroutine("WaitForSec");
+            entered = true;
         }
     }
+
+    // private void OnTriggerExit(Collider other) {
+    //     entered = 
+    // }
     IEnumerator WaitForSec()
     {
         yield return new WaitForSeconds(6);
-        Destroy(beginTxt);
-        Destroy(gameObject);
+        beginTxt.SetActive(false);
+        // Destroy(beginTxt);
+        // Destroy(gameObject);
     }
 }
