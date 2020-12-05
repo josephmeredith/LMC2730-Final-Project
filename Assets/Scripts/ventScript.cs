@@ -6,6 +6,7 @@ public class ventScript : MonoBehaviour
 {
     public GameObject ventText;
     public GameObject jumpText;
+    
     void Start()
     {
         ventText.SetActive(false);
