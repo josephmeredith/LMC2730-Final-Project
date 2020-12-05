@@ -6,29 +6,38 @@ using TMPro;
 
 public class ventD : MonoBehaviour
 {
-    public GameObject enterText;
+    // public GameObject ventText;
+    public GameObject interactText;
+    private bool onVent = false;
+
     void Start()
     {
-        enterText.SetActive(false);
+        interactText.SetActive(false);
+        // ventText.SetActive(false);
     }
 
-    // Update is called once per frame
+    void Update() {
+        if (Input.GetKeyDown(KeyCode.E) && onVent) {
+            SceneManager.LoadScene("ventScene");
+        }
+    }
+
     void OnTriggerStay(Collider other)
     {
-        if(other.gameObject.tag == "Player")
+        if(other.tag == "Player")
         {
-            enterText.SetActive(true);
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-            }
+            // ventText.SetActive(true);
+            interactText.SetActive(true); 
+            onVent = true;           
         }
     }
     void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.tag == "Player")
         {
-            enterText.SetActive(false);
+            // ventText.SetActive(false);
+            interactText.SetActive(false);
+            onVent = false;
         }
     }
 }

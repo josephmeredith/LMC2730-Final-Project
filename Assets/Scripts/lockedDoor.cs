@@ -34,6 +34,9 @@ public class lockedDoor : MonoBehaviour
             enterText.SetActive(true);
             playerStay = true;
         }
+        if (playerStay) {
+            enterText.SetActive(false);
+        }
     }
 
     void OnTriggerExit(Collider other)

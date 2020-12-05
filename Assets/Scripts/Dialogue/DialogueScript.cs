@@ -16,6 +16,7 @@ public class DialogueScript : MonoBehaviour
     {
         StartCoroutine(Type());
         // Debug.Log("start");
+        continueButton.SetActive(false);
     }
 
     private void Update()

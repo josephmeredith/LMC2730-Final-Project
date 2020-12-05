@@ -5,24 +5,32 @@ using UnityEngine;
 public class ventScript : MonoBehaviour
 {
     public GameObject ventText;
+    public GameObject jumpText;
     void Start()
     {
         ventText.SetActive(false);
+        jumpText.SetActive(false);
     }
 
     void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Player")
+        if (other.tag == "Player")
         {
             ventText.SetActive(true);
-            StartCoroutine("WaitForSec");
+            jumpText.SetActive(true);
+            // StartCoroutine("WaitForSec");
         }
     }
-    
-    IEnumerator WaitForSec()
-    {
-        yield return new WaitForSeconds(3);
-        Destroy(ventText);
-        Destroy(gameObject);
+
+    private void OnTriggerExit(Collider other) {
+        ventText.SetActive(false);
+        jumpText.SetActive(false);
     }
+    
+    // IEnumerator WaitForSec()
+    // {
+    //     yield return new WaitForSeconds(3);
+    //     Destroy(ventText);
+    //     Destroy(gameObject);
+    // }
 }
