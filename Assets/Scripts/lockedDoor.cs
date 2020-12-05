@@ -6,30 +6,33 @@ using UnityEngine.UI;
 
 public class lockedDoor : MonoBehaviour
 {
-    public TextMeshProUGUI dtextDisplay;
-    //public GameObject text;
-    //public KeyCode key;
+    public GameObject doorText;
+    public GameObject enterText;
+    public GameObject continueButton;
+    private bool playerStay = false;
 
     void Start()
     {
-        dtextDisplay.text = "Press E to interact.";
-        dtextDisplay.enabled = false;
-
+        // dtextDisplay.text = "Press E to interact.";
+        // dtextDisplay.enabled = false;
+        doorText.SetActive(false);
+        enterText.SetActive(false);
     }
-    void FixedUpdate()
+    void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) && playerStay && !continueButton.activeSelf)
         {
-            dtextDisplay.text = "Damn, MotherBoard locked me in... I have to find another way out.";
-            //Debug.Log("Press registered");
+            enterText.SetActive(false);
+            doorText.SetActive(true);
         }
     }
 
     void OnTriggerStay(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Player" && !continueButton.activeSelf)
         {
-            dtextDisplay.enabled = true;
+            enterText.SetActive(true);
+            playerStay = true;
         }
     }
 
@@ -37,7 +40,9 @@ public class lockedDoor : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            dtextDisplay.enabled = false;
+            enterText.SetActive(false);
+            doorText.SetActive(false);
+            playerStay = false;
         }
     }
 }

@@ -15,6 +15,7 @@ public class DialogueScript : MonoBehaviour
     private void Start()
     {
         StartCoroutine(Type());
+        // Debug.Log("start");
     }
 
     private void Update()
@@ -22,11 +23,13 @@ public class DialogueScript : MonoBehaviour
         if (textDisplay.text == sentences[index])
         {
             continueButton.SetActive(true);
+            // Debug.Log("update");
         }
     }
 
     IEnumerator Type()
     {
+        // Debug.Log("type begins");
         foreach (char letter in sentences[index].ToCharArray())
         {
             textDisplay.text += letter;
@@ -37,6 +40,7 @@ public class DialogueScript : MonoBehaviour
     public void NextSentence()
     {
         continueButton.SetActive(false);
+        // Debug.Log("next sentence");
 
         if (index < sentences.Length - 1)
         {
