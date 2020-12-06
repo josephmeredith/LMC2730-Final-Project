@@ -12,17 +12,20 @@ public class blockedPath : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.tag == "Player")
         {
             uiObject.SetActive(true);
-            StartCoroutine("WaitForSec");
+            // StartCoroutine("WaitForSec");
         }
     }
-    IEnumerator WaitForSec()
-    {
-        yield return new WaitForSeconds(5);
-        Destroy(uiObject);
-        Destroy(gameObject);
+    private void OnTriggerExit(Collider other) {
+        uiObject.SetActive(false);
     }
+    // IEnumerator WaitForSec()
+    // {
+    //     yield return new WaitForSeconds(5);
+    //     Destroy(uiObject);
+    //     Destroy(gameObject);
+    // }
 }
 

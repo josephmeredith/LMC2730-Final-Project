@@ -5,14 +5,24 @@ using UnityEngine;
 public class doorOC : MonoBehaviour
 {
     public GameObject instructions;
+    private Animator anim;
+    private bool onDoor = false;
+
+  private void Update() {
+      if (Input.GetKeyDown(KeyCode.E) && onDoor) {
+          anim.SetTrigger("OpenClose");
+      }
+  }
     private void OnTriggerStay(Collider other)
     {
-      if(other.tag == "doorMayar")
+      if (other.tag == "doorMayar")
       {
           instructions.SetActive(true);
-          Animator anim = other.GetComponentInChildren<Animator>();
-          if(Input.GetKeyDown(KeyCode.E))
-                anim.SetTrigger("OpenClose");
+          anim = other.GetComponentInChildren<Animator>();
+          onDoor = true;
+          // if (Input.GetKeyDown(KeyCode.E)) {
+          //       anim.SetTrigger("OpenClose");
+          // }
       }
     }
 
@@ -21,6 +31,7 @@ public class doorOC : MonoBehaviour
        if (other.tag == "doorMayar")
        {
              instructions.SetActive(false);
+             onDoor = false;
        }
     }
 }
