@@ -27,16 +27,16 @@ public class lockedDoor : MonoBehaviour
         }
     }
 
-    void OnTriggerStay(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player" && !continueButton.activeSelf)
         {
             enterText.SetActive(true);
             playerStay = true;
         }
-        if (playerStay) {
-            enterText.SetActive(false);
-        }
+        // if (playerStay) {
+        //     enterText.SetActive(false);
+        // }
     }
 
     void OnTriggerExit(Collider other)
