@@ -8,6 +8,8 @@ TagManager:
   - Door
   - doorMayar
   - Phone
+  - fuse
+  - breaker
   layers:
   - Default
   - TransparentFX

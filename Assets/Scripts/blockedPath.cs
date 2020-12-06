@@ -5,6 +5,7 @@ using UnityEngine;
 public class blockedPath : MonoBehaviour
 {
     public GameObject uiObject;
+    public GameObject inventorySlot;
     void Start()
     {
         uiObject.SetActive(false);
