@@ -3,7 +3,37 @@ guid: 6832552d1e373c74ab5f9ad076a1cff5
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: innermat
+    second: {fileID: 2100000, guid: da3cf7120ef615847954e597e7026779, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: metal
+    second: {fileID: 2100000, guid: 83cb4a51dab492f48bf8256777aa1d41, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: screen
+    second: {fileID: 2100000, guid: bc3ff820b588c394e89ee16e825c354b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: screws
+    second: {fileID: 2100000, guid: 5fe2bdf9ba953bf4fb62257382ebad27, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: switches
+    second: {fileID: 2100000, guid: 724cff09f46818545a58404d79cfc265, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: switchkeys
+    second: {fileID: 2100000, guid: b12db80bbbcd1a04facff3ed21c8e497, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
