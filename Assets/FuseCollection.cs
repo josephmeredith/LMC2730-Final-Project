@@ -8,14 +8,19 @@ public class FuseCollection : MonoBehaviour
     private bool onFuse = false;
     private bool collectFuses = false;
     private bool finished = false;
+    private bool enabling = false;
     public GameObject currentFuse;
     public GameObject slot1;
     public GameObject slot2;
     public GameObject slot3;
     public GameObject slot4;
+    public GameObject interactText;
+    public GameObject breakerText;
+
+    public GameObject[] enable = new GameObject[10];
+    public GameObject[] disable = new GameObject[10];
     private int currentSlot = 0;
 
-    public GameObject breakerText;
     void Start()
     {
         collectText.SetActive(false);
@@ -33,6 +38,10 @@ public class FuseCollection : MonoBehaviour
             collectText.SetActive(false);
             currentSlot++;
             onFuse = false;
+        } else if (Input.GetKeyDown(KeyCode.E) && enabling) {
+            interactText.SetActive(false);
+            enableAll();
+            disableAll();
         }
 
         if (currentSlot == 1) {
@@ -50,16 +59,32 @@ public class FuseCollection : MonoBehaviour
     private void OnTriggerStay(Collider other) {
         if (other.tag == "breaker" && !finished) {
             collectFuses = true;
-            Debug.Log("collectFuses = true");
         } else if (other.tag == "fuse" && collectFuses) {
             currentFuse = other.gameObject;
             collectText.SetActive(true);
             onFuse = true;
+        } else if (other.tag == "breaker" && finished) {
+            interactText.SetActive(true);
+            breakerText.SetActive(false);
+            enabling = true;
         }
     }
 
     private void OnTriggerExit(Collider other) {
         collectText.SetActive(false);
+        interactText.SetActive(false);
         onFuse = false;
+    }
+
+    private void enableAll() {
+        for (int i = 0; i < enable.Length; i++) {
+            enable[i].SetActive(true);
+        }
+    }
+
+    private void disableAll() {
+        for (int i = 0; i < disable.Length; i++) {
+            disable[i].SetActive(false);
+        }
     }
 }
